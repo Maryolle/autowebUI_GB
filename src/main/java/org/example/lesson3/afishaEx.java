@@ -12,10 +12,10 @@ public class afishaEx {
 
         WebDriver webDriver = new ChromeDriver();
         webDriver.get("https://www.afisha.ru/");
-        Thread.sleep(5000);
 
         WebElement inputSearch = webDriver.findElement(By.xpath("//input[@placeholder='Событие, актер, место']"));
-        inputSearch.sendKeys("брат");
+        inputSearch.sendKeys("Брат");
+        Thread.sleep(1000);
         webDriver.findElement(By.xpath("//div[.='Брат']")).click();
         Thread.sleep(5000);
 
