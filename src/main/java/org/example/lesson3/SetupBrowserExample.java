@@ -9,12 +9,12 @@ public class SetupBrowserExample {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
 
-        ChromeOptions Options = new ChromeOptions();
-        Options.addArguments("--headless");
-        Options.addArguments("--disable-notifications");
-        Options.addArguments("user-agent=Googlebot/2.1(+https://google.com/bot.html)");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--disable-notifications");
+        chromeOptions.addArguments("user-agent=Googlebot/2.1(+https://google.com/bot.html)");
 
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("https://google.com");
 
         Thread.sleep(5000);
