@@ -1,6 +1,6 @@
 package triangle;
 
-public class AreaOfTheTriangle{
+public class TriangleTest{
 
     public static void main( String[] args )
     {
