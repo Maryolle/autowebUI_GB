@@ -1,6 +1,6 @@
 package triangle;
 
-public class TriangleTest{
+public class TrianglesAreaForTest{
 
     public static void main( String[] args ) throws Exception {
         double a;

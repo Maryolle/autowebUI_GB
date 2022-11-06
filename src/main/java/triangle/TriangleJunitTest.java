@@ -2,9 +2,9 @@ package triangle;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static triangle.TriangleTest.triangleArea;
+import static triangle.TrianglesAreaForTest.triangleArea;
 
-public class TriangleJunitTest {
+class TriangleTest {
     @Test
     void FirstTriangleTest() throws Exception {
         Assertions.assertEquals(0.9682,triangleArea(1,2,2),0.001);
