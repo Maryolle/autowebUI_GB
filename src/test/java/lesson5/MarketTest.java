@@ -1,10 +1,7 @@
 package lesson5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,6 +36,7 @@ public class MarketTest {
         buttonAdd.click();
         WebElement clickAdd = driver.findElement(By.cssSelector("css=.ajax_add_to_cart_button > span"));
         clickAdd.click();
+        Assertions.assertTrue(driver.getCurrentUrl().contains("automation"));
     }
 
     @Test
