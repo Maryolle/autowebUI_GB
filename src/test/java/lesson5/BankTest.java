@@ -65,7 +65,7 @@ public class BankTest {
         Assertions.assertTrue(driver.getCurrentUrl().contains("https://parabank.parasoft.com/parabank/about.htm"));
     }
 
-    @Test //4 тест на открытие форума и тест поисковика
+    @Test //4 тест на открытие форума и поиска через поисковик
     void ForumInfo() {
         WebElement Forum = driver.findElement(By.xpath("/html/body/div[2]/div/ul[1]/li[6]/a"));
         Forum.click();
@@ -77,7 +77,7 @@ public class BankTest {
         Assertions.assertTrue(driver.getCurrentUrl().contains("https://forums.parasoft.com/search?query=money&scope=site&source=community"));
     }
 
-    @Test //5 тест на запрос статы по аккаунту 12345
+    @Test //5 тест на запрос статы по аккаунту за январь по дебету
     void AccountStatistics() {
         WebElement Login = driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[1]/input"));
         Login.click();
@@ -96,6 +96,8 @@ public class BankTest {
 
         WebElement SelectMonth = driver.findElement(By.xpath("//*[@id=\"month\"]/option[2]"));
         SelectMonth.click();
+        WebElement SelectType = driver.findElement(By.xpath("//*[@id=\"transactionType\"]/option[3]"));
+        SelectType.click();
         WebElement GetStatistics = driver.findElement(By.xpath("//*[@id=\"rightPanel\"]/div/div[2]/form/table/tbody/tr[3]/td[2]/input"));
         Assertions.assertTrue(driver.getCurrentUrl().contains("https://parabank.parasoft.com/parabank/activity.htm?id=" + number));
     }
